@@ -1,9 +1,9 @@
 #!/bin/bash
 
-sudo apt update
-sudo apt upgrade
-sudo apt install zsh
-chsh -s zsh
+# sudo apt update
+# sudo apt upgrade
+# sudo apt install zsh
+# chsh -s zsh
 
 # Install Homebrew
 # sudo apt-get install build-essential procps curl file git
