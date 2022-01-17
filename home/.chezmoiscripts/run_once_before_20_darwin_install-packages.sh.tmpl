@@ -1,4 +1,44 @@
-{{ if eq .chezmoi.os "linux" -}}
-#!/bin/sh
-sudo apt install ripgrep
+{{ if eq .chezmoi.os "darwin" -}}
+#!/bin/bash
+
+set -eufo pipefail
+
+{{ $brews := list
+"awscli"
+"gh"
+"zsh"
+"node@14"
+"node@15"
+"node@16"
+"node@17"
+"aws-vault"
+"bitwarden-cli"
+"deno"
+"docker"
+"docker-compose"
+"exercism"
+"fswatch"
+"fzf"
+"git"
+"stow"
+"go"
+"helm"
+"kubernetes-cli"
+"leela-zero"
+"nginx"
+"openvpn-connect"
+"openvpn"
+"postgresql"
+"python"
+"terraform"
+"vault"
+"yarn"
+"tldr"
+"bat" -}}
+
+brew bundle --no-lock --file=/dev/stdin <<EOF
+{{ range ($brews | sortAlpha | uniq) -}}
+brew "{{ . }}"
+{{ end -}}
+EOF
 {{ end -}}
