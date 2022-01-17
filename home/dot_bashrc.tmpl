@@ -1,0 +1,13 @@
+{{ if eq .chezmoi.os "linux" -}}
+#!/bin/bash
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/brandon/.profile
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+{{ end -}}
+
+
+{{ if eq .chezmoi.os "darwin" -}}
+#!/bin/bash
+export PATH=$PATH:/opt/homebrew/bin
+{{ end -}}
+
+
