@@ -34,7 +34,8 @@ set -eufo pipefail
 "vault"
 "yarn"
 "tldr"
-"bat" -}}
+"bat"
+"gcc" -}}
 
 brew bundle --no-lock --file=/dev/stdin <<EOF
 {{ range ($brews | sortAlpha | uniq) -}}
