@@ -1,7 +1,8 @@
 {{ if eq .chezmoi.os "linux" -}}
 #!/bin/sh
 sudo apt update -y
+sudo apt-get update -y
 sudo apt upgrade -y
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+CI=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 sudo apt-get install build-essential
 {{ end -}}
