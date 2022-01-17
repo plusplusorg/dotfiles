@@ -5,4 +5,6 @@ sudo apt-get update -y
 sudo apt upgrade -y
 CI=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 sudo apt-get install build-essential
+command -v zsh | sudo tee -a /etc/shells
+chsh -s $(which zsh)
 {{ end -}}
