@@ -5,7 +5,8 @@ sudo apt-get update -y
 sudo apt upgrade -y
 echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> $HOME/.profile
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+. $HOME/.profile
 CI=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 sudo apt-get install build-essential
-sudo source $HOME/.profile
+. $HOME/.profile
 {{ end -}}
