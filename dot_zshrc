@@ -113,7 +113,7 @@ export EDITOR="code -w"
 
 # Linux Homebrew
 # **You will need to turn this into a Chezmoi template to make this bit different per Macos/Linux. Also remove hardcoded `brandon` directory
-echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/brandon/.profile
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> $HOME/.profile
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 
