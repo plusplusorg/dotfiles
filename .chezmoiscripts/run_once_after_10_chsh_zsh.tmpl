@@ -1,7 +1,4 @@
-{{ if eq .chezmoi.os "linux" -}}
 #!/bin/sh
 command -v zsh | sudo tee -a /etc/shells
 chsh -s $(which zsh)
-source $HOME/.zshrc; clear
-{{ end -}}
-
+. $HOME/.zshrc; clear

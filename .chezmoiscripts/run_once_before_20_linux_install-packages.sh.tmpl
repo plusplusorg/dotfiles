@@ -3,6 +3,10 @@
 
 set -eufo pipefail
 
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> $HOME/.bashrc
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+. $HOME/.bashrc
+
 {{ $brews := list
 "gh"
 "zsh"
