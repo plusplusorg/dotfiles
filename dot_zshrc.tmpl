@@ -108,12 +108,12 @@ alias ls="${aliases[ls]:-ls} -A"
 setopt glob_dots     # no special treatment for file names with a leading dot
 setopt no_auto_menu  # require an extra TAB press to open the completion menu
 
-# Set default $EDITOR to VSCode
+# Set default $EDITOR t
+o VSCode
 export EDITOR="code -w"
-
+{{ if eq .chezmoi.os "linux" -}}
 # Linux Homebrew
 # **You will need to turn this into a Chezmoi template to make this bit different per Macos/Linux. Also remove hardcoded `brandon` directory
 echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> $HOME/.profile
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
-
+{{ end -}}
