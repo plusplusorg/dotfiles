@@ -116,3 +116,8 @@ export EDITOR="code -w"
 echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> $HOME/.profile
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 {{ end -}}
+
+# Manage multiple node versions
+alias node14='export PATH="/usr/local/opt/node@13/bin:$PATH"'
+alias node16='export PATH="/usr/local/opt/node@12/bin:$PATH"'
+alias node17='export PATH="/usr/local/opt/node@10/bin:$PATH"'
