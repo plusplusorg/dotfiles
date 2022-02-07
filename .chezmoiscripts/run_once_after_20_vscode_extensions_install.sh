@@ -1,3 +1,5 @@
+#!/bin/sh
+
 code --install-extension amazonwebservices.aws-toolkit-vscode
 code --install-extension ask-toolkit.alexa-skills-kit-toolkit
 code --install-extension blackmist.LinkCheckMD
