@@ -34,7 +34,10 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 "yarn"
 "tldr"
 "bat"
-"gcc" -}}
+"gcc"
+"pnpm"
+"typescript"
+-}}
 
 brew bundle --no-lock --file=/dev/stdin <<EOF
 {{ range ($brews | sortAlpha | uniq) -}}
