@@ -14,6 +14,9 @@ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip
 unzip awscliv2.zip
 sudo ./aws/install
 
+# aws Amplify Install
+curl -sL https://aws-amplify.github.io/amplify-cli/install | zsh && $SHELL
+
 {{ $brews := list
 "cdktf"
 "gh"
